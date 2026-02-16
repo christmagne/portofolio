@@ -1,39 +1,52 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Calendar, Code2 } from "lucide-react";
+import { ExternalLink, Calendar, Code2, Github } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const projects = [
   {
+    title: "Gestion des Incidents (Université)",
+    description:
+      "Application de gestion et de prise en charge des incidents liés aux bâtiments universitaires. J'ai assuré le rôle DevOps : mise en place de pipelines CI/CD, automatisation des déploiements, gestion de l'infrastructure cloud, monitoring, sécurité et intégration continue pour garantir la fiabilité et la rapidité des livraisons applicatives.",
+    tech: ["NestJS", "React", "Docker", "CI/CD", "Cloud"],
+    period: "Fév 2025 – Juin 2025",
+    link: "https://preprod.maintenance-iusjc.me/login",
+    github: "https://gitlab.com/tutore_ing5/backend/apigateway"
+  },
+  {
     title: "Gestion & Réservation de Centres Touristiques",
     description:
-      "Application web de gestion et réservation de centres d'intérêts pour touristes.",
+      "Application web de gestion et réservation de centres d'intérêts pour touristes. J'ai conçu et développé l'ensemble des API REST, géré la documentation, la sécurité, les tests et l'intégration avec le frontend pour garantir la robustesse et la scalabilité du backend.",
     tech: ["Spring Boot", "Angular", "MySQL"],
     period: "Sept 2024 – Jan 2025",
-    link: "#",
+    link: "https://gitlab.com/J.touko/app-gestion-centre-dinteret-g6",
+    github: "https://gitlab.com/J.touko/app-gestion-centre-dinteret-g6"
   },
   {
     title: "Application Mobile de Fitness",
     description:
-      "Application mobile de fitness avec suivi d'entraînement et programmes personnalisés.",
+      "Application mobile de fitness avec suivi d'entraînement et programmes personnalisés. Ma tâche principale a été le développement du frontend avec Ionic, création d'une interface utilisateur réactive, intégration du suivi, des notifications et de l'expérience utilisateur.",
     tech: ["Ionic", "Firebase"],
     period: "Sept 2024 – Jan 2025",
-    link: "#",
+    link: "https://gitlab.com/brendakoundjo88/fitnessapp",
+    github: "https://gitlab.com/brendakoundjo88/fitnessapp"
   },
   {
-    title: "Gestion Inscriptions & Absences Étudiants",
+    title: "Gestion Administrative et pédagogique d'une école",
     description:
-      "Application web pour la gestion des inscriptions et le suivi des absences.",
-    tech: ["Spring Boot", "Angular"],
-    period: "Nov 2024 – Déc 2024",
-    link: "#",
+      "Application web pour la gestion des inscriptions et le suivi des absences. J'ai été principalement chargé de la partie backend : conception de la base de données, développement des API REST avec Django, gestion de l'authentification et des rôles pour la sécurité.",
+    tech: ["Django", "Angular"],
+    period: "Mai 2024 – Août 2024",
+    link: "https://gitlab.com/Landry_i3/gesco_stage",
+    github: "https://gitlab.com/Landry_i3/gesco_stage"
   },
   {
     title: "Gestion Transport Bus Universitaire",
     description:
-      "Système de gestion du transport en bus de l'université.",
+      "Système de gestion du transport en bus de l'université. Ma tâche principale était la conception de l'application : analyse des besoins, modélisation des processus, élaboration des diagrammes UML et définition de l'architecture logicielle pour garantir une solution efficace et évolutive.",
     tech: ["Web App"],
     period: "Oct 2023 – Juin 2024",
-    link: "#",
+    link: "https://gitlab.com/brenda.koundjo/appweb-gestion-transport-gp5",
+    github: "https://gitlab.com/brenda.koundjo/appweb-gestion-transport-gp5"
   },
 ];
 
@@ -84,17 +97,32 @@ const ProjectsSection = () => (
                     {project.title}
                   </h3>
                 </div>
-                <motion.a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors shrink-0 mt-1"
-                  aria-label="Voir le dépôt"
-                  whileHover={{ scale: 1.2, rotate: -10 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <ExternalLink size={18} />
-                </motion.a>
+                <div className="flex items-center gap-2 mt-1">
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors shrink-0"
+                      aria-label="Voir le dépôt GitHub"
+                      whileHover={{ scale: 1.2, rotate: -10 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <Github size={18} />
+                    </motion.a>
+                  )}
+                  <motion.a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors shrink-0"
+                    aria-label="Voir le projet en ligne"
+                    whileHover={{ scale: 1.2, rotate: -10 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <ExternalLink size={18} />
+                  </motion.a>
+                </div>
               </div>
               <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-3">

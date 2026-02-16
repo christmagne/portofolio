@@ -77,7 +77,7 @@ const HeroSection = () => {
             animate="animate"
             className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6"
           >
-            ✨ Disponible dès le 23 Février 2026
+            ✨ Disponible dès Février 2026
           </motion.div>
         </motion.div>
 

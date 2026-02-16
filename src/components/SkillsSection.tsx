@@ -6,6 +6,7 @@ const skillGroups = [
   { title: "Frameworks & Web", skills: ["Spring Boot", "Django", "Angular", "Node.js", "Ionic", "Bootstrap", "jQuery"] },
   { title: "Outils & DevOps", skills: ["Docker", "Git", "Prometheus", "Grafana", "Terraform"] },
   { title: "Bases de données", skills: ["MySQL", "PostgreSQL"] },
+  { title: "Data & BI", skills: ["Power BI", "Tableau", "Visual Studio"] },
   { title: "Design & CMS", skills: ["Figma", "Adobe XD", "WordPress", "Zola"] },
   { title: "ERP & Autre", skills: ["ODOO", "UML", "Méthodologie Agile"] },
 ];

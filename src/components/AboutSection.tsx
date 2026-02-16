@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 const highlights = [
   { icon: Award, label: "5ème année", desc: "Ingénierie Informatique" },
-  { icon: Globe, label: "3 langues", desc: "Français, Anglais, Allemand" },
+  { icon: Globe, label: "Langues", desc: "Français : Langue maternelle | Anglais : intermédiaire" },
   { icon: Heart, label: "Passionnée", desc: "Tech & Innovation" },
 ];
 
@@ -40,10 +40,12 @@ const AboutSection = () => (
               transition={{ type: "spring", stiffness: 200 }}
               className="relative w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl shadow-primary/10"
             >
-              {/* Placeholder avatar - replace with actual photo */}
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent to-primary/10 flex items-center justify-center">
-                <User size={80} className="text-primary/40" />
-              </div>
+              {/* Photo réelle */}
+              <img
+                src="/photo.jpg"
+                alt="Photo de profil"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
 
             {/* Floating badge */}
@@ -55,7 +57,7 @@ const AboutSection = () => (
               animate={{ y: [0, -5, 0] }}
               className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
             >
-              Disponible 🚀
+              Disponible
             </motion.div>
           </div>
         </motion.div>
