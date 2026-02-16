@@ -21,15 +21,20 @@ const ContactSection = () => (
       ].map((item, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: i * 0.1 }}
-          className="rounded-xl border border-border bg-card p-5 flex items-center gap-4 text-left"
+          transition={{ delay: i * 0.12, type: "spring", stiffness: 120 }}
+          whileHover={{ y: -4, scale: 1.03 }}
+          className="rounded-xl border border-border bg-card p-5 flex items-center gap-4 text-left hover:border-primary/30 transition-colors cursor-default"
         >
-          <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+          <motion.div
+            whileHover={{ rotate: 15, scale: 1.15 }}
+            transition={{ type: "spring", stiffness: 400 }}
+            className="p-2 rounded-lg bg-primary/10 text-primary shrink-0"
+          >
             <item.icon size={18} />
-          </div>
+          </motion.div>
           <div>
             <p className="text-xs text-muted-foreground">{item.label}</p>
             {item.href ? (
