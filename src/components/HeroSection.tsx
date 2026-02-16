@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Mail, Phone, Linkedin, ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { MapPin, Mail, Phone, Linkedin, ChevronDown, Download } from "lucide-react";
 import Typewriter from "./Typewriter";
 
 const floatingVariants = {
@@ -24,36 +23,46 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-accent/30 via-background to-background"
     >
-      {/* Animated background particles */}
+      {/* Animated geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
-        {[...Array(6)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-primary/10 blur-xl"
+            className="absolute rounded-full"
             style={{
-              width: `${60 + i * 40}px`,
-              height: `${60 + i * 40}px`,
-              left: `${10 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
+              width: `${40 + i * 30}px`,
+              height: `${40 + i * 30}px`,
+              left: `${5 + i * 12}%`,
+              top: `${15 + (i % 4) * 20}%`,
+              background: `hsl(174 72% 40% / ${0.04 + i * 0.01})`,
             }}
             animate={{
-              x: [0, 30 * (i % 2 === 0 ? 1 : -1), 0],
-              y: [0, 20 * (i % 2 === 0 ? -1 : 1), 0],
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
+              x: [0, 40 * (i % 2 === 0 ? 1 : -1), 0],
+              y: [0, 30 * (i % 2 === 0 ? -1 : 1), 0],
+              scale: [1, 1.3, 1],
+              rotate: [0, 180, 360],
             }}
             transition={{
               repeat: Infinity,
-              duration: 8 + i * 2,
+              duration: 10 + i * 3,
               ease: "easeInOut",
-              delay: i * 0.5,
+              delay: i * 0.7,
             }}
           />
         ))}
+        {/* Decorative lines */}
+        <motion.div
+          className="absolute top-1/4 right-0 w-64 h-px bg-gradient-to-l from-transparent via-primary/20 to-transparent"
+          animate={{ x: [-100, 100, -100], opacity: [0, 1, 0] }}
+          transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 left-0 w-48 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"
+          animate={{ x: [100, -100, 100], opacity: [0, 1, 0] }}
+          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
+        />
       </div>
 
       <motion.div
@@ -68,7 +77,7 @@ const HeroSection = () => {
             animate="animate"
             className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6"
           >
-            Disponible dès le 23 Février 2026
+            ✨ Disponible dès le 23 Février 2026
           </motion.div>
         </motion.div>
 
@@ -100,7 +109,7 @@ const HeroSection = () => {
           Ingénieure en Informatique & Systèmes d'Information
         </motion.p>
 
-        <motion.div variants={fadeUp} className="mb-8">
+        <motion.div variants={fadeUp} className="mb-8 h-8">
           <span className="text-foreground font-medium text-lg md:text-xl">
             <Typewriter
               texts={[
@@ -118,7 +127,7 @@ const HeroSection = () => {
 
         <motion.div
           variants={fadeUp}
-          className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground"
+          className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mb-8"
         >
           {[
             { icon: Mail, text: "christ.magne@saintjeaningenieur.org" },
@@ -128,7 +137,7 @@ const HeroSection = () => {
             <motion.span
               key={i}
               className="flex items-center gap-1.5"
-              whileHover={{ scale: 1.05, color: "hsl(174 72% 50%)" }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
               <item.icon size={14} className="text-primary" />
@@ -145,6 +154,19 @@ const HeroSection = () => {
           >
             <Linkedin size={14} className="text-primary" />
             LinkedIn
+          </motion.a>
+        </motion.div>
+
+        <motion.div variants={fadeUp}>
+          <motion.a
+            href="/CV_MAGNE_DASSI.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow"
+          >
+            <Download size={18} /> Télécharger mon CV
           </motion.a>
         </motion.div>
 
