@@ -3,9 +3,9 @@ import { User, Award, Heart, Globe } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const highlights = [
-  { icon: Award, label: "5ème année", desc: "Ingénierie Informatique" },
-  { icon: Globe, label: "Langues", desc: "Français : Langue maternelle | Anglais : intermédiaire" },
-  { icon: Heart, label: "Passionnée", desc: "Tech & Innovation" },
+  { icon: Award, label: "Ingénieure diplômée", desc: "Informatique & systèmes d'information" },
+  { icon: Globe, label: "Mastère spécialisé", desc: "Expert Big Data Engineer · UTT" },
+  { icon: Heart, label: "Langues", desc: "Français maternel · Anglais intermédiaire" },
 ];
 
 const AboutSection = () => (
@@ -71,11 +71,7 @@ const AboutSection = () => (
             transition={{ duration: 0.6 }}
             className="text-muted-foreground leading-relaxed"
           >
-            Étudiante en 5ème année d'ingénierie en Informatique et Systèmes d'Information
-            à <span className="text-foreground font-medium">Saint Jean Ingénieur</span>, je suis 
-            passionnée par le développement logiciel, la gestion des systèmes d'information et 
-            les nouvelles technologies. Je recherche un stage de fin d'études pour mettre en 
-            pratique mes compétences techniques et contribuer à des projets innovants.
+            Étudiante en <span className="text-foreground font-medium">Mastère Spécialisé Expert Big Data Engineer à l'UTT</span> (Bac+6, titre RNCP niveau 7), je suis diplômée d'un cycle ingénieur en informatique et systèmes d'information. Après six mois comme Data Analyst en contexte bancaire, je recherche un stage de fin d'études de six mois à partir de mars 2027.
           </motion.p>
 
           <motion.p
@@ -85,9 +81,7 @@ const AboutSection = () => (
             transition={{ duration: 0.6, delay: 0.15 }}
             className="text-muted-foreground leading-relaxed"
           >
-            Mon parcours m'a permis de développer des compétences variées allant du développement 
-            web full-stack avec <span className="text-foreground font-medium">Spring Boot, Django et Angular</span> à 
-            la gestion de bases de données et l'administration système.
+            Ma formation couvre la data science, le Machine Learning, l'IA générative et l'architecture Big Data. Je souhaite mettre ces compétences au service de projets data dans des secteurs variés, tout en documentant et en partageant mes travaux.
           </motion.p>
 
           <div className="grid grid-cols-3 gap-3 pt-2">

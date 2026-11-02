@@ -2,18 +2,47 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 const skillGroups = [
-  { title: "Langages", skills: ["Python", "Java", "C", "SQL", "JavaScript", "HTML/CSS"] },
-  { title: "Frameworks & Web", skills: ["Spring Boot", "Django", "Angular", "Node.js", "Ionic", "Bootstrap", "jQuery"] },
-  { title: "Outils & DevOps", skills: ["Docker", "Git", "Prometheus", "Grafana", "Terraform"] },
-  { title: "Bases de données", skills: ["MySQL", "PostgreSQL"] },
-  { title: "Data & BI", skills: ["Power BI", "Tableau", "Visual Studio"] },
-  { title: "Design & CMS", skills: ["Figma", "Adobe XD", "WordPress", "Zola"] },
-  { title: "ERP & Autre", skills: ["ODOO", "UML", "Méthodologie Agile"] },
+  {
+    title: "Data science & IA",
+    skills: ["Machine Learning", "Deep Learning", "IA générative", "MLOps (en cours)", "Détection de fraude", "Analyse et préparation de données"],
+  },
+  {
+    title: "Architecture Big Data",
+    skills: ["Hadoop", "Spark", "Kafka", "Cloud (en cours)", "Pipelines & ETL", "NoSQL", "MongoDB"],
+  },
+  {
+    title: "Dashboards & restitution",
+    skills: ["Power BI", "Tableau", "KNIME Analytics", "Excel", "Tableaux de bord"],
+  },
+  {
+    title: "Programmation & données",
+    skills: ["Python", "SQL", "Java", "C", "JavaScript", "HTML/CSS", "PostgreSQL", "MySQL"],
+  },
+  {
+    title: "Développement web & mobile",
+    skills: ["Spring Boot", "Django", "Angular", "Node.js", "Ionic", "Bootstrap", "jQuery"],
+  },
+  {
+    title: "Outils & DevOps",
+    skills: ["Git", "Docker", "CI/CD", "Prometheus", "Grafana", "Terraform"],
+  },
+  {
+    title: "Design, CMS & ERP",
+    skills: ["Figma", "Adobe XD", "WordPress", "Zola", "Odoo"],
+  },
+  {
+    title: "Documentation & méthodes",
+    skills: ["Documentation technique", "Animation de formations", "Méthodes agiles", "UML"],
+  },
+  {
+    title: "Langues",
+    skills: ["Français (langue maternelle)", "Anglais (intermédiaire)"],
+  },
 ];
 
 const SkillsSection = () => (
   <section id="skills" className="section-padding max-w-6xl mx-auto">
-    <SectionHeading title="Compétences" subtitle="Technologies et outils maîtrisés" />
+    <SectionHeading title="Compétences" subtitle="Data science, Big Data et outils" />
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {skillGroups.map((group, i) => (

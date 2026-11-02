@@ -15,10 +15,9 @@ const ContactSection = () => (
     >
       {[
         { icon: Mail, label: "Email personnelle", value: "christmagne0310@gmail.com", href: "mailto:christmagne0310@gmail.com" },
-        { icon: Mail, label: "Email institutionnelle", value: "christ.magne@saintjeaningenieur.org", href: "mailto:christ.magne@saintjeaningenieur.org" },
-        { icon: Phone, label: "Téléphone", value: "+237 696147745", href: "tel:+237696147745" },
-        { icon: Linkedin, label: "LinkedIn", value: "Christ Magne", href: "https://www.linkedin.com/in/christ-magne-b0aba327b" },
-        { icon: MapPin, label: "Localisation", value: "Cameroun" },
+        { icon: Phone, label: "Téléphone", value: "07 66 14 99 27", href: "tel:+33766149927" },
+        { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/christ-magne-b0aba327b", href: "https://www.linkedin.com/in/christ-magne-b0aba327b" },
+        { icon: MapPin, label: "Mobilité", value: "Mobile sur toute la France" },
       ].map((item, i) => (
         <motion.div
           key={i}

@@ -4,20 +4,31 @@ import SectionHeading from "./SectionHeading";
 
 const experiences = [
   {
-    role: "Développeur Backend (Stagiaire)",
+    role: "Data Analyst",
+    company: "Business Intelligence Agency (BIA)",
+    location: "Yaoundé, Cameroun",
+    period: "Mars – Août 2026 · 6 mois",
+    tasks: [
+      "Conception d'un système de détection de fraudes transactionnelles pour BIAPAY : modélisation des flux, exploration et nettoyage des données, repérage des comportements anormaux.",
+      "Création de tableaux de bord de pilotage sous Power BI et audit des notes de frais en contexte bancaire : contrôle de cohérence et détection d'anomalies et de fraudes.",
+      "Environnement : Python, SQL, Power BI et Knime Analytics.",
+    ],
+  },
+  {
+    role: "Développeuse back-end (stage)",
     company: "BE IT AFRICA",
     location: "Yaoundé, Cameroun",
     period: "Mai 2025 - Août 2025",
     tasks: [
-      "Développement d'une application de gestion scolaire avec Django",
-      "Formation des élèves (Word, Excel et programmation web)",
+      "Développement du back-end et de la base de données d'une application de gestion scolaire avec Django (Python), Docker et CI/CD.",
+      "Animation de formations en bureautique (Word, Excel) et programmation web.",
     ],
   },
   {
     role: "Stagiaire DSI",
     company: "Institut Universitaire Saint Jean",
     location: "Eyang, Cameroun",
-    period: "Juin 2023 - Août 2023",
+    period: "Juin – Août 2023 · 3 mois",
     tasks: [
       "Maintenance et gestion des équipements informatiques",
       "Formation en développement web Frontend",
@@ -27,11 +38,10 @@ const experiences = [
     role: "Stagiaire DSI",
     company: "CTI (Churchill Training Institut)",
     location: "Douala, Cameroun",
-    period: "Juin 2022 – Août 2022",
+    period: "Été 2021 et été 2022",
     tasks: [
-      "Conception d'une application de gestion avec Laravel",
-      "Formation des élèves et gestion des équipements informatiques",
-      "Maintenance de l'application de gestion du centre",
+      "Conception d'une application de gestion du centre de formation avec Laravel (2021), puis alimentation et maintenance de l'application (2022).",
+      "Inventaire et gestion du parc informatique ; formation d'élèves à la bureautique et à la programmation web.",
     ],
   },
 ];

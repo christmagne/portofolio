@@ -4,11 +4,18 @@ import SectionHeading from "./SectionHeading";
 
 const education = [
   {
-    degree: "Formation d'Ingénieur en Informatique et Systèmes d'Information",
+    degree: "Mastère Spécialisé Expert Big Data Engineer",
+    school: "Université de Technologie de Troyes (UTT)",
+    location: "France",
+    period: "2026 – 2027",
+    level: "Bac+6 · Titre RNCP niveau 7 · En cours",
+  },
+  {
+    degree: "Cycle ingénieur en informatique et systèmes d'information",
     school: "Saint Jean Ingénieur",
     location: "Yaoundé, Cameroun",
     period: "2023 – 2026",
-    level: "5ème année",
+    level: "Diplôme obtenu",
   },
   {
     degree: "Licence en Système d'Aide à la Décision",

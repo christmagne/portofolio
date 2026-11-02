@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Accueil", href: "#hero" },
@@ -52,14 +52,6 @@ const Navbar = () => {
               {item.label}
             </button>
           ))}
-          <a
-            href="/CV_MAGNE_DASSI.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
-          >
-            <Download size={16} /> Mon CV
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -87,14 +79,6 @@ const Navbar = () => {
                   {item.label}
                 </button>
               ))}
-              <a
-                href="/CV_MAGNE_DASSI.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 mt-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium w-fit"
-              >
-                <Download size={16} /> Mon CV
-              </a>
             </div>
           </motion.div>
         )}

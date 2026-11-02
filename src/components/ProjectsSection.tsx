@@ -4,49 +4,38 @@ import SectionHeading from "./SectionHeading";
 
 const projects = [
   {
-    title: "Gestion des Incidents (Université)",
+    title: "Détection de fraudes transactionnelles — BIAPAY",
     description:
-      "Application de gestion et de prise en charge des incidents liés aux bâtiments universitaires. J'ai assuré le rôle DevOps : mise en place de pipelines CI/CD, automatisation des déploiements, gestion de l'infrastructure cloud, monitoring, sécurité et intégration continue pour garantir la fiabilité et la rapidité des livraisons applicatives.",
-    tech: ["NestJS", "React", "Docker", "CI/CD", "Cloud"],
-    period: "Fév 2025 – Juin 2025",
-    link: "https://preprod.maintenance-iusjc.me/login",
-    github: "https://gitlab.com/tutore_ing5/backend/apigateway"
+      "Projet réalisé pendant mon stage de Data Analyst chez BIA : exploration et nettoyage des données de paiement, modélisation des flux transactionnels et repérage de comportements anormaux. Le workflow KNIME est consultable en ligne.",
+    tech: ["Data Analysis", "KNIME", "Python", "SQL", "Détection de fraude"],
+    period: "Mars – Août 2026",
+    link: "https://hub.knime.com/christmagne/spaces/Public/BIAPAY_workflow13~tRfB7uUjdpmRXXkp/current-state?show-deployment=true",
+    linkLabel: "Voir le workflow KNIME",
   },
   {
     title: "Gestion & Réservation de Centres Touristiques",
     description:
-      "Application web de gestion et réservation de centres d'intérêts pour touristes. J'ai conçu et développé l'ensemble des API REST, géré la documentation, la sécurité, les tests et l'intégration avec le frontend pour garantir la robustesse et la scalabilité du backend.",
+      "Application web de gestion et de réservation de centres d'intérêt pour touristes.",
     tech: ["Spring Boot", "Angular", "MySQL"],
-    period: "Sept 2024 – Jan 2025",
+    period: "2024 – 2025",
     link: "https://gitlab.com/J.touko/app-gestion-centre-dinteret-g6",
     github: "https://gitlab.com/J.touko/app-gestion-centre-dinteret-g6"
   },
   {
     title: "Application Mobile de Fitness",
     description:
-      "Application mobile de fitness avec suivi d'entraînement et programmes personnalisés. Ma tâche principale a été le développement du frontend avec Ionic, création d'une interface utilisateur réactive, intégration du suivi, des notifications et de l'expérience utilisateur.",
+      "Application mobile de fitness développée avec Ionic et Firebase.",
     tech: ["Ionic", "Firebase"],
-    period: "Sept 2024 – Jan 2025",
+    period: "2024 – 2025",
     link: "https://gitlab.com/brendakoundjo88/fitnessapp",
     github: "https://gitlab.com/brendakoundjo88/fitnessapp"
   },
   {
-    title: "Gestion Administrative et pédagogique d'une école",
+    title: "Gestion des inscriptions et des absences d'étudiants",
     description:
-      "Application web pour la gestion des inscriptions et le suivi des absences. J'ai été principalement chargé de la partie backend : conception de la base de données, développement des API REST avec Django, gestion de l'authentification et des rôles pour la sécurité.",
-    tech: ["Django", "Angular"],
-    period: "Mai 2024 – Août 2024",
-    link: "https://gitlab.com/Landry_i3/gesco_stage",
-    github: "https://gitlab.com/Landry_i3/gesco_stage"
-  },
-  {
-    title: "Gestion Transport Bus Universitaire",
-    description:
-      "Système de gestion du transport en bus de l'université. Ma tâche principale était la conception de l'application : analyse des besoins, modélisation des processus, élaboration des diagrammes UML et définition de l'architecture logicielle pour garantir une solution efficace et évolutive.",
-    tech: ["Web App"],
-    period: "Oct 2023 – Juin 2024",
-    link: "https://gitlab.com/brenda.koundjo/appweb-gestion-transport-gp5",
-    github: "https://gitlab.com/brenda.koundjo/appweb-gestion-transport-gp5"
+      "Application web de gestion des inscriptions et des absences d'étudiants.",
+    tech: ["Spring Boot", "Angular"],
+    period: "2024",
   },
 ];
 
@@ -111,17 +100,19 @@ const ProjectsSection = () => (
                       <Github size={18} />
                     </motion.a>
                   )}
-                  <motion.a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors shrink-0"
-                    aria-label="Voir le projet en ligne"
-                    whileHover={{ scale: 1.2, rotate: -10 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <ExternalLink size={18} />
-                  </motion.a>
+                  {project.link && (
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors shrink-0"
+                      aria-label={project.linkLabel ?? "Voir le projet en ligne"}
+                      whileHover={{ scale: 1.2, rotate: -10 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <ExternalLink size={18} />
+                    </motion.a>
+                  )}
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mb-4">{project.description}</p>

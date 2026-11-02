@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Mail, Phone, Linkedin, ChevronDown, Download } from "lucide-react";
+import { MapPin, Mail, Phone, Linkedin, ChevronDown } from "lucide-react";
 import Typewriter from "./Typewriter";
 
 const floatingVariants = {
@@ -77,7 +77,7 @@ const HeroSection = () => {
             animate="animate"
             className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6"
           >
-            ✨ Disponible dès Février 2026
+            ✨ Stage de fin d'études (PFE) · 6 mois dès mars 2027
           </motion.div>
         </motion.div>
 
@@ -90,7 +90,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Magne Dassi{" "}
+            Christ Laure{" "}
           </motion.span>
           <motion.span
             initial={{ opacity: 0, x: 20 }}
@@ -98,7 +98,7 @@ const HeroSection = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="text-gradient"
           >
-            Christ Laure
+            MAGNE DASSI
           </motion.span>
         </motion.h1>
 
@@ -106,17 +106,17 @@ const HeroSection = () => {
           variants={fadeUp}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-3"
         >
-          Ingénieure en Informatique & Systèmes d'Information
+          Mastère Spécialisé Expert Big Data Engineer · UTT
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-8 h-8">
           <span className="text-foreground font-medium text-lg md:text-xl">
             <Typewriter
               texts={[
-                "Management des SI",
-                "Développement Web & Mobile",
-                "Data & Intelligence Artificielle",
-                "DevOps & Cloud",
+                "Data Science",
+                "IA générative & Big Data",
+                "Machine Learning & Deep Learning",
+                "Détection de fraude",
               ]}
               speed={70}
               deleteSpeed={35}
@@ -130,9 +130,9 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mb-8"
         >
           {[
-            { icon: Mail, text: "christ.magne@saintjeaningenieur.org" },
-            { icon: Phone, text: "+237 696147745" },
-            { icon: MapPin, text: "Cameroun" },
+            { icon: Mail, text: "christmagne0310@gmail.com" },
+            { icon: Phone, text: "07 66 14 99 27" },
+            { icon: MapPin, text: "Mobile sur toute la France" },
           ].map((item, i) => (
             <motion.span
               key={i}
@@ -145,7 +145,7 @@ const HeroSection = () => {
             </motion.span>
           ))}
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/christ-magne-b0aba327b"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 hover:text-primary transition-colors"
@@ -154,19 +154,6 @@ const HeroSection = () => {
           >
             <Linkedin size={14} className="text-primary" />
             LinkedIn
-          </motion.a>
-        </motion.div>
-
-        <motion.div variants={fadeUp}>
-          <motion.a
-            href="/CV_MAGNE_DASSI.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow"
-          >
-            <Download size={18} /> Télécharger mon CV
           </motion.a>
         </motion.div>
 
