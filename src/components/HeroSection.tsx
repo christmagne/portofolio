@@ -77,7 +77,7 @@ const HeroSection = () => {
             animate="animate"
             className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium mb-6"
           >
-            ✨ Stage de fin d'études (PFE) · 6 mois dès mars 2027
+            ✨ Stage PFE de 6 mois dès mars 2027 · Alternance dès maintenant
           </motion.div>
         </motion.div>
 

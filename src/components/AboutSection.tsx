@@ -71,7 +71,7 @@ const AboutSection = () => (
             transition={{ duration: 0.6 }}
             className="text-muted-foreground leading-relaxed"
           >
-            Étudiante en <span className="text-foreground font-medium">Mastère Spécialisé Expert Big Data Engineer à l'UTT</span> (Bac+6, titre RNCP niveau 7), je suis diplômée d'un cycle ingénieur en informatique et systèmes d'information. Après six mois comme Data Analyst en contexte bancaire, je recherche un stage de fin d'études de six mois à partir de mars 2027.
+            Étudiante en <span className="text-foreground font-medium">Mastère Spécialisé Expert Big Data Engineer à l'UTT</span> (Bac+6, titre RNCP niveau 7), je suis diplômée d'un cycle ingénieur en informatique et systèmes d'information. Je recherche un stage de fin d'études de six mois à partir de mars 2027, ainsi qu'une alternance que je peux commencer dès maintenant.
           </motion.p>
 
           <motion.p
